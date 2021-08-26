@@ -1,22 +1,5 @@
-import cc.arduino.*;
-import org.firmata.*;
-
-import processing.serial.*;
-import cc.arduino.*;
-Arduino arduino;
-
-public void setup()
-{
-  noStroke();
-  size(300,300);
-  arduino = new Arduino(this, Arduino.list()[0], 57600);
-}
-
 public void draw()
 {
-  background(192);
-  int y = arduino.analogRead(5);
-  System.out.println(y);
   //body
   fill(255,255,255);
   ellipse(150,115+y/1.4,131,95);
